@@ -33,6 +33,7 @@ menghasilkan laporan yang formatnya meniru file Excel asli
 | Logika merge (`merge.ts`) | Selesai, 6 unit test lolos |
 | Setup monorepo (pnpm workspace, packages/core, Vitest, TypeScript) | Selesai |
 | Kerangka `apps/web` (Vite + React + TS + Dexie) | Selesai, typecheck dan build lolos |
+| Pengaturan unit (nama, jenis, saldo awal, 5 pejabat) | Selesai: validasi di core (19 test lolos), form di apps/web |
 | Repo GitHub | Belum diperiksa oleh agent (repo privat) |
 | Layer penyimpanan (Dexie) | Skema v1 dibuat di `apps/web/src/db.ts`, belum dipakai UI |
 | UI input transaksi | Belum dimulai |
@@ -40,15 +41,17 @@ menghasilkan laporan yang formatnya meniru file Excel asli
 | Ekspor PDF (pdfmake, F4) | Belum dimulai |
 | Backup & import | Belum dimulai |
 | Kunci bulan | Belum dimulai |
-| Pengaturan unit & tanda tangan | Belum dimulai |
+| Pengaturan unit & tanda tangan | Pengaturan unit selesai; snapshot tanda tangan saat kunci bulan belum |
 
 **Langkah berikutnya yang disarankan (urut):**
-1. Jawab pertanyaan A (platform) dan D (pnpm/npm, React+Vite/Next.js) di bagian 4.
-2. Buat `apps/web` atau `apps/desktop` sesuai jawaban.
-3. Bangun layer penyimpanan dan halaman input di `apps/web`.
-4. Ekspor Excel, lalu PDF.
-5. Backup, import, dan merge.
-6. Kunci bulan dan snapshot tanda tangan.
+1. ~~Jawab pertanyaan A dan D~~ (dijawab: PWA, pnpm, React + Vite).
+2. ~~Kerangka `apps/web`~~ (selesai).
+3. ~~Pengaturan unit~~ (selesai).
+4. Input transaksi dan daftar bulanan, dengan saldo dari `core`.
+5. Pratinjau laporan dua kolom dengan font Carlito.
+6. Ekspor PDF (pdfmake, F4) dan Excel (ExcelJS).
+7. Backup, import, dan merge.
+8. Kunci bulan dan snapshot tanda tangan.
 
 ---
 
@@ -246,4 +249,5 @@ Jangan mengubah keputusan tanpa menanyakan saya terlebih dahulu.
 | 2026-10-22 | Judul laporan (bagian 7) diubah menjadi "LAPORAN KEUANGAN / [NAMA PENGGUNA] / BULAN : [NAMA BULAN] [TAHUN]". Nama diambil dari pengaturan unit aktif. | Pengguna |
 | 2026-10-22 | Setup awal: monorepo pnpm, packages/core (types, saldo, merge) dengan 11 unit test lolos. Folder apps/ belum dibuat karena menunggu keputusan A dan D di bagian 4. | Agent 2 |
 | 2026-10-22 | Keputusan A: satu PWA untuk HP dan laptop. Keputusan D: pnpm dan React + Vite (tanpa Next.js). Kerangka apps/web dibuat. | Pengguna |
+| 2026-10-22 | Halaman pengaturan unit dibuat. Validasi di packages/core/src/unit.ts. Unit aktif disimpan di localStorage (bukan data keuangan). | Agent 3 |
 | 2026-10-22 | Font laporan diganti dari Calibri menjadi Carlito (bagian 3 nomor 18 dan bagian 7). | Pengguna |
