@@ -1,0 +1,10 @@
+{
+  "name": "mrican-keuangan",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Aplikasi pencatatan keuangan offline untuk desa dan kelompok",
+  "scripts": {
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck"
+  }
+}
