@@ -32,8 +32,9 @@ menghasilkan laporan yang formatnya meniru file Excel asli
 | Logika saldo (`saldo.ts`) | Selesai, 5 unit test lolos (termasuk cocok dengan saldo Januari 2025) |
 | Logika merge (`merge.ts`) | Selesai, 6 unit test lolos |
 | Setup monorepo (pnpm workspace, packages/core, Vitest, TypeScript) | Selesai |
+| Kerangka `apps/web` (Vite + React + TS + Dexie) | Selesai, typecheck dan build lolos |
 | Repo GitHub | Belum diperiksa oleh agent (repo privat) |
-| Layer penyimpanan (Dexie) | Belum dimulai |
+| Layer penyimpanan (Dexie) | Skema v1 dibuat di `apps/web/src/db.ts`, belum dipakai UI |
 | UI input transaksi | Belum dimulai |
 | Ekspor Excel (ExcelJS) | Belum dimulai |
 | Ekspor PDF (pdfmake, F4) | Belum dimulai |
@@ -244,4 +245,5 @@ Jangan mengubah keputusan tanpa menanyakan saya terlebih dahulu.
 | 2026-10-22 | Dokumen handoff dibuat. Keputusan awal dari brainstorming. | Agent 1 |
 | 2026-10-22 | Judul laporan (bagian 7) diubah menjadi "LAPORAN KEUANGAN / [NAMA PENGGUNA] / BULAN : [NAMA BULAN] [TAHUN]". Nama diambil dari pengaturan unit aktif. | Pengguna |
 | 2026-10-22 | Setup awal: monorepo pnpm, packages/core (types, saldo, merge) dengan 11 unit test lolos. Folder apps/ belum dibuat karena menunggu keputusan A dan D di bagian 4. | Agent 2 |
+| 2026-10-22 | Keputusan A: satu PWA untuk HP dan laptop. Keputusan D: pnpm dan React + Vite (tanpa Next.js). Kerangka apps/web dibuat. | Pengguna |
 | 2026-10-22 | Font laporan diganti dari Calibri menjadi Carlito (bagian 3 nomor 18 dan bagian 7). | Pengguna |
