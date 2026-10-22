@@ -7,7 +7,7 @@ Baca [docs/HANDOFF.md](docs/HANDOFF.md) untuk keputusan proyek, status, dan lang
 ## Struktur
 
 - `packages/core`: logika bisnis murni (model, saldo, merge). Tidak bergantung pada UI atau penyimpanan.
-- `apps/`: aplikasi (PWA dan/atau desktop). Belum dibuat, menunggu keputusan platform.
+- `apps/web`: PWA (Vite + React + Dexie). Penyimpanan lokal di IndexedDB.
 
 ## Perintah
 
